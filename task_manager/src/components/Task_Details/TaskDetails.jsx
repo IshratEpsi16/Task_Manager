@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, Link } from 'react-router-dom';
 
 const TaskDetails = () => {
     const { id } = useParams(); // Get the task ID from the URL params
@@ -72,6 +72,10 @@ const TaskDetails = () => {
     return (
         <div className="p-4">
             <h2 className="text-lg font-bold mb-4">Task Details</h2>
+            <Link to='/'><button className="bg-yellow-500 text-white px-4 py-2 mr-2"
+            >
+                Home
+            </button></Link>
             <div className="border p-4 mb-4">
                 {isEditMode ? (
                     <>
